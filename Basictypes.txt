@@ -52,4 +52,86 @@ L3: Loops, Arrays
 Frequent Issues(I)
               public static void main(String[] args){
               }
-Frequent 
+Frequent Issue(Ⅱ)
+  don't create duplicate variables with the same name
+  int salary = 0 ;
+  int salary = 0 ;
+  double salary = 0 ;
+
+good programming style 
+    1. meaningful names
+    2. whitespace 
+    3. don't duplicate tests (if)
+
+loops
+    while (condition){
+        statements
+    }
+
+for (initialization;condition;update){
+    statements
+}
+
+break terminate a for or a while loop
+continue skips the current iteration and proceeds directly to next loops
+
+Arrays: all elements of an array must have the same type
+starts at zero and ends at length-1 
+    int[] values = new int[5];
+    values[0] = 12;
+    values[5] = 12; // compile but throws an exception at run-time
+
+Arrays are just another type 
+    int[][] values;
+    int[] is a type
+
+To create a array of a given size, use the operator new
+    int[] values = new int[5];
+or  int size = 2;
+    int[] values = new int[size];
+
+Array initialization (after decalaration)
+    int[] values = {8,12,24,-23};
+
+Accessing arrays 
+    values[3] = 18;
+
+    int size = values.length;
+
+L4 Classes and objects
+
+set int min = Integer.MAX_VALUE;
+
+Debugging Notes:
+  1. Using System.out.println
+  2. Ctrl+shift+f
+
+Note 
+  1. Class names are capitalized
+  2. 1 Class = 1 file
+  3. having a main method means the class can be run
+
+Defining classes:
+Constructor:
+
+public class CLASSNAME{
+    CLASSNAME(){
+    }
+    CLASSNAME([ARGUMENTS]){
+    }
+}
+CLASSNAME OBJ1 = new CLASSNAME();
+CLASSNAME OBJ2 = new CLASSNAME();
+
+Baby constructor:
+
+public class Baby{
+    String name;
+    boolean isMale;
+    Baby[] siblings;
+    Baby(String myname, boolean maleBaby){
+        name = myname;
+        ismale = maleBaby;
+    }
+}
+
