@@ -1,0 +1,55 @@
+L1 Types, Variables, Operators
+  compile Java : Source Code -> javac -> Bythe Code -> Java
+
+  Programme structure:
+class CLASSNAME{
+    public static void main(String[] args){
+      STATEMENTS
+    }
+}
+
+OUTPUT: System.out.println(some string);
+
+Types: boolean, int, doubles, String
+  parentheses 圆括号 > / * > + -
+
+L2 More types, Methods, Conditionals
+  double d = 5/2  // d=2.0
+
+  adding methods:
+  public static void NAME(){
+    STATEMENTS;
+  }
+
+Return Values：
+  public static TYPE NAME(){
+    STATEMENTS
+    return EXPRESSION;
+  }
+
+Mathematic Functions:
+  Math.sin(x) 
+  Math.cos(Math.PI/2)
+  Math.pow(2,3)
+  Math.log(Math.log(x+y))
+
+if statement
+if (CONDITIONS){
+  STATEMENTS
+}
+
+Conversion by methods
+  String five = Integer.toString(5);
+  String five = "" + 5; // five="5"
+
+Comparison operators
+  Do not call == on doubles! EVER
+  double a = Math.cos(Math.PI/2);
+  double b = 0.0;
+
+L3: Loops, Arrays
+
+Frequent Issues(I)
+              public static void main(String[] args){
+              }
+Frequent 
