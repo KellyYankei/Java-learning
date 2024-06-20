@@ -135,3 +135,88 @@ public class Baby{
     }
 }
 
+Using classes:
+    Baby shilon = new Baby("Jolie",true);
+    Baby knox = new Baby("Kelly",false);
+Accessing fields:
+    shilon.name
+    Object.FIELDNAME
+
+Primitives vs References
+-> basic Java types  -> arrays, objects
+                        String, int[], Baby
+                        store elsewhere -> stores a number that locates the object
+                                            The object's location is called a reference
+                                            Using '=' updates the reference
+
+Static types and methods
+    static: means the field/method is defined for the class
+    static field:
+    public class Baby{
+      static int numberBabiesmade = 0;
+      Baby(){
+        numberBabiesmade += 1; // class counter
+      }
+    }
+    static method:
+    public class Baby{
+        static void cry(Baby thebaby){
+            System.out.println(thebaby.name+"cries";){
+            }
+        }
+    }
+    public class Baby{
+      void cry(){
+            System.out.println(name+"cries");
+      }
+    }
+
+L5 Access Control, Class scope, Packages, Java, API
+public class Counter{
+    int myCount = 0;
+    static int ourCount = 0;
+    void increment(){
+        myCount ++;
+        ourCount ++ ;
+    }
+    public static void main(String[] args){
+        Counter counter1 = new Counter();
+        Counter counter2 = new Counter();
+        counter1.increment();
+        counter2.increment();  
+        counter2,increment();  //myCount always change
+    }
+}
+
+Access Control
+    public class Malicious{
+      public static void main(String[] args){
+          maliciousMethod(new CreditCard());
+          static void maliciousMethod(CreditCard card){
+              card.expenses = 0;
+              System.out.println(card.cardNumber);
+          }
+      }
+    }
+    public: other classes in this package can use 
+    private: only this class can use 
+    public and private can apply to any field and method
+
+this keyword
+    class Example{
+        int memberVariable;
+        void setVariable(int newVal){
+            this.memberVariable += newVal;
+        }
+    }
+
+Packages:
+    Each class belongs to a package
+    Classes in the s
+
+
+
+    
+    
+
+
