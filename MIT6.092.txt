@@ -229,11 +229,74 @@ Packages:
     All classes see classes in Java.lang
 
 ArrayList: loop over all items
-    example:
-        import java.util.ArrayList;
-        class ArrayListExample{
-            public
-        }
+                    example:
+                        import java.util.ArrayList;
+                        class ArrayListExample{
+                            public static void mian(String[] arguments){
+                                ArrayList<String> strings = new ArrayList<String>();
+                                strings.add("Abcd");
+                                strings.add("Eddy");
+                                strings.add("Adam");
+                                System.out.println(strings.size());
+                                System.out.println(strings.get(0));
+                                System.out.println(strings.get(1));
+                
+                                strings.set(0,"Goodbye");
+                                strings.remove(1);
+                                for(int i = 0; i< strings.size(); i++){
+                                    System.out.println(strings.get(i));
+                                }
+                                for(String s : strings){
+                                    System.out.println(s);
+                                }
+                            }
+                        }
+Sets: 
+      only have one copy for each objects
+      no array index
+      features: add/remove objects from the set
+
+      Treeset: sorted
+      Hashset: unordered
+                        example:
+                            import java.util.TreeSet;
+                            class SetExample{
+                                public static void main(String[] arguments){
+                                    TreeSet<String> strings = new TreeSet<String>();
+                                    strings.add("Abcd");
+                                    strings.add("Eddy");
+                                    strings.add("Adam");
+                                    System.out.println(strings.size());
+                                    System.out.println(strings.first());
+                                    System.out.println(strings.last());
+                  
+                                    strings.remove("Abcd");
+                                    for(String s : strings){
+                                        System.out.println(s);
+                                   }
+                                }
+                            }
+Maps
+       stores a key and value pair
+
+        TreeMap: sorted
+        HashMap: unordered
+
+examples
+public static void main(String[] arguments){
+    HashMap<String,String> strings = new HashMap<String,String>();
+    strings.put("Abcd","abcd@mit.edu");
+    strings.put("Eddy","eddy@mit.edu");
+    System.out.println(strings.size());
+    strings.remove("Abcd");
+    System.out.println(strings.get("Eddy"))
+    for(String s : strings.keySet()){
+        System.out.println(s);
+    }
+    for(String s : strings.values()){
+        System.out.println(s);
+    }
+  }
 
 L6
     interface
