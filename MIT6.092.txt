@@ -357,5 +357,67 @@ Inheritance Summary
     ·A can replace a parent's method by re-implementing
     ·If A doesn't implement something Java searches ancestors
 
+Exceptions
+    Why use an Exception? To tell the code using your method that something went wrong
 
+    public class Exception
+        ·Exception is a class
+        ·just inherit from it!
+    public class MyException extends Exception{}
+
+    Warn Java about the Exception
+                        example:
+                            public Object get(int index) throws
+                              ArrayOutOfBoundsException{
+                                  If(index<0 || index >= size()){
+                                      throw new
+                                          ArrayOutOfBoundsException(""+index);
+                                  }
+                              }
+    try {get(-1);
+    } catch (ArrayOutOfBoundsException err) { 
+    System.out.println(“oh dear!”); 
+    }
+
+    void doBad() throws ArrayOutOfBoundsException { 
+        get(-1); 
+    }
+
+  I/O 
+      System.out.println("some string")
+
+Input full picture: 
+      InputStream,InputStreamReader, BufferedReader 
+          
+      InputStream is a stream of bytes
+          --read one byte after another using read()
+          a byte is just a number
+          --data on your hard drive is stored in bytes
+          --bytes can be interpreted as characters, numbers
+
+          InputStream stream = System.in;  
+
+      InputStreamReader
+          ·Reader is a class for character streams
+          --Read one character after another using read()
+          ·InputStreamReader takes an InputStream and converts bytes to characters
+          ·Still inconvenient
+          --can only read a character at a time
+
+          new InputStreamReader(stream)
+
+      BufferedReader
+          ·BufferedReader buffers a character stream so that you can read line by line
+          String readLine()
+          new BufferedReader(
+              new InputStreamReader(System.in);
+          )
+
+      FileReader
+          FileReader fr = new FileReader("readme.txt");
+          BufferedReader br = new BufferedReader(fr);
+need:
+      import java.io.BufferedReader;
+      import java.io.FileReader;
+      import java.io.IOException;
 
