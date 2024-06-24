@@ -332,8 +332,30 @@ L6
         do not provide code, only the definition
         a class can implement any number of interface
     
+Interfaces
+    public interface Icar{
+        boolean isCar = true;
+        int getNumWheels();
+    }
+    class BigRig implements ICar{
+        public Oval(int width, int height, Color color){
+            //set the fields...
+        }
+        int getNumwheels(){
+            return 18;
+        }
+    }
+Inheritance
+    public class Wizard extends Dude{  //wizard is a subclass of Dude, have everything in Dud
+    }
+!!!You can only inherit from one class
+Inheritance Summary
+    ·Class A extends B{}==A is a subclass of B
+    ·A has all the fields and methods that B has
+    ·A can add it's own fields and methods
+    ·A can only have 1 parent
+    ·A can replace a parent's method by re-implementing
+    ·If A doesn't implement something Java searches ancestors
 
-    
-    
 
 
