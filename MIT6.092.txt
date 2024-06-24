@@ -212,9 +212,63 @@ this keyword
 
 Packages:
     Each class belongs to a package
-    Classes in the s
+    Classes in the same package serve a similar purpose
+    Packages are just directories
+    Classes in other packages need to be imported
+                          example:
+                              package adult;
+                              import parenttools.Baby;
+                              import parenttools.BabyFood;
+                              public class Parent{
+                                  public static void main(String[] args){
+                                      Baby.baby = new Baby();
+                                      baby.feed(new BabyFood());
+                                  }
+                              }
+    All classes see classes in the same package
+    All classes see classes in Java.lang
 
+ArrayList: loop over all items
+    example:
+        import java.util.ArrayList;
+        class ArrayListExample{
+            public
+        }
 
+L6
+    interface
+    public class Flower{
+        public void draw(Graphics surface){
+            //code to draw a flower
+        }
+    }
+    public class DrawGraphics{
+        ArrayList<BouncingBox> boxes = new ArrayList<BouncingBox>();
+        ArrayList<Flower> flowers = new ArrayList<Flower>();
+        ArrayList<Car> cars = new ArrayList<Car>;
+
+        public void draw(Graphic surface){
+              for(BouncingBox box : boxes){
+                  box.draw(surface);
+              }
+              for(Flower flower : flowers){
+                  flower.draw(surface);
+              }
+        }
+    }
+    Interface: Drawable
+        import java.awt.Graphics;
+        interface Drawable{
+            void draw(Graphics surface){
+                void draw(Graphics surface);
+                void setColor(Color color);
+            }
+        }
+    Interface Notes:
+        only have methods(mostly true)
+        do not provide code, only the definition
+        a class can implement any number of interface
+    
 
     
     
